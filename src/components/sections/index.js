@@ -1,0 +1,10 @@
+export { Hero } from "./Hero";
+export { AboutSection } from "./AboutSection";
+export { ProjectsSection } from "./ProjectsSection";
+export { CourseSection } from "./CourseSection";
+export { ChallengesSection } from "./ChallengesSection";
+export { CareersSection } from "./CareersSection";
+export { CertificatesSection } from "./CertificatesSection";
+export { ConceptsSection } from "./ConceptsSection";
+export { GlossarySection } from "./GlossarySection";
+export { CuriositiesSection } from "./CuriositiesSection";

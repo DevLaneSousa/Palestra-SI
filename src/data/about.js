@@ -1,0 +1,20 @@
+export const ABOUT = {
+  name: "Kailane Sousa",
+  brand: "Fireframe | Experiências Responsivas",
+  age: "24 anos",
+  formation: "Formada em BSI pela UNEX (2025)",
+  role: "Dev Front-end & Designer UI/UX",
+  stack: "Vue.js, React, TypeScript, Figma — do wireframe ao código",
+  achievement: "1º lugar no Hackathon PMVP",
+  extra: "Também atua com mentoria em programação e robótica para crianças.",
+  bio: "Sou artista digital apaixonada pelo ensino e pela criação de soluções que unem design e tecnologia. Antes de Sistemas de Informação, passei por Engenharia Mecânica — uma base de raciocínio lógico e analítico que carrego até hoje no jeito de resolver problemas em código. Hoje, como Fireframe, transformo ideias em interfaces funcionais, performáticas e acessíveis, e divido meu tempo entre projetos freelance, mentoria de novas desenvolvedoras e competições de robótica.",
+  timeline: [
+    { year: "Antes", label: "Engenharia Mecânica", desc: "Base de lógica e raciocínio analítico" },
+    { year: "2025", label: "Formada em BSI — UNEX", desc: "A mesma jornada que vocês estão começando agora" },
+    { year: "Hoje", label: "Fireframe", desc: "Dev Front-end & Designer UI/UX, freelance + mentoria" },
+  ],
+  email: "kailanesousa18@gmail.com",
+  github: "github.com/kailanesousa",
+  linkedin: "linkedin.com/in/kailanesousa",
+  location: "Vitória da Conquista, BA",
+};
