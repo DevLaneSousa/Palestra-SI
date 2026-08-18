@@ -6,8 +6,11 @@ import { useCarousel } from "../../hooks/useCarousel";
 import { CERTIFICATES } from "../../data/certificates";
 import { C, DISPLAY, MONO, BODY } from "../../styles/theme";
 
-const TOTAL_HOURS = CERTIFICATES.reduce((sum, c) => sum + parseInt(c.hours, 10), 0);
-const TOTAL_INSTITUTIONS = new Set(CERTIFICATES.map((c) => c.institution.split(" — ")[0])).size;
+const TOTAL_HOURS = CERTIFICATES.reduce((sum, c) => {
+  const value = Number.parseFloat(c.hours);
+  return sum + (Number.isFinite(value) ? value : 0);
+}, 0);
+const TOTAL_INSTITUTIONS = new Set(CERTIFICATES.map((c) => c.issuer || c.institution)).size;
 
 const STATS = [
   { icon: Award, value: `${CERTIFICATES.length}`, label: "certificados e contando" },

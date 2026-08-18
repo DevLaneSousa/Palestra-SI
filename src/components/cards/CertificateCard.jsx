@@ -4,6 +4,8 @@ import { assetUrl } from "../../utils/assetUrl";
 import { C, DISPLAY, MONO, BODY } from "../../styles/theme";
 
 export function CertificateCard({ cert, onOpen }) {
+  const images = [cert.image1, cert.image2].filter(Boolean).map((src) => assetUrl(src));
+
   return (
     <div
       onClick={() =>
@@ -11,9 +13,9 @@ export function CertificateCard({ cert, onOpen }) {
           icon: Award,
           color: cert.color,
           title: cert.title,
-          subtitle: cert.institution,
-          desc: `Carga horária: ${cert.hours} · ${cert.date}`,
-          images: [assetUrl(cert.image)],
+          subtitle: cert.issuer || cert.institution,
+          desc: cert.hours === "—" ? `Categoria: ${cert.category} • Certificado de ${cert.issuer}` : `Carga horária: ${cert.hours}`,
+          images,
         })
       }
       className="snap-start shrink-0 w-72 sm:w-80 rounded-xl overflow-hidden cursor-pointer transition-all hover:-translate-y-1 group"
@@ -23,7 +25,7 @@ export function CertificateCard({ cert, onOpen }) {
     >
       <div className="relative overflow-hidden" style={{ aspectRatio: "4/3", background: C.panel2 }}>
         <img
-          src={assetUrl(cert.image)}
+          src={images[0] || assetUrl(cert.image)}
           alt={`Certificado — ${cert.title}`}
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
           loading="lazy"
@@ -39,10 +41,10 @@ export function CertificateCard({ cert, onOpen }) {
           {cert.title}
         </h3>
         <p style={{ color: cert.color, fontFamily: MONO }} className="text-xs mb-2">
-          {cert.institution}
+          {cert.issuer || cert.institution}
         </p>
         <p style={{ color: C.mutedSoft, fontFamily: BODY }} className="text-xs">
-          {cert.hours} · {cert.date}
+          {cert.hours} · {cert.category}
         </p>
       </div>
     </div>

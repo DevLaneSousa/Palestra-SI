@@ -15,7 +15,7 @@ export function Nav({ progress }) {
   return (
     <div className="sticky top-0 z-40 w-full">
       <div style={{ background: C.panel, borderBottom: `1px solid ${C.borderSoft}` }}>
-        <div className="max-w-6xl mx-auto flex items-center justify-between px-4 md:px-8">
+        <div className="max-w-6xl mx-auto flex items-center justify-between gap-3 px-4 md:px-8 overflow-hidden">
           <div className="flex items-center gap-2 py-3 pr-3 shrink-0">
             <Terminal size={16} style={{ color: C.green }} />
             <span style={{ fontFamily: MONO, color: C.text }} className="text-sm font-medium hidden sm:inline">
@@ -23,13 +23,13 @@ export function Nav({ progress }) {
             </span>
           </div>
 
-          <div className="hidden md:flex items-center overflow-x-auto">
+          <div className="hidden md:flex items-center justify-center flex-1 min-w-0 overflow-hidden">
             {NAV_ITEMS.map((n) => (
               <button
                 key={n.id}
                 onClick={() => goTo(n.id)}
                 style={{ fontFamily: MONO, borderRight: `1px solid ${C.borderSoft}`, color: C.muted }}
-                className="px-4 py-3 text-xs whitespace-nowrap transition-colors hover:text-white"
+                className="px-2.5 py-3 text-[10px] lg:text-[11px] whitespace-nowrap transition-colors hover:text-white"
                 onMouseEnter={(e) => (e.currentTarget.style.color = C.green)}
                 onMouseLeave={(e) => (e.currentTarget.style.color = C.muted)}
               >
