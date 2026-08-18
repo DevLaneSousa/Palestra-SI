@@ -4,7 +4,7 @@ import { assetUrl } from "../../utils/assetUrl";
 import { C, DISPLAY, MONO, BODY } from "../../styles/theme";
 
 export function CertificateCard({ cert, onOpen }) {
-  const images = [cert.image1, cert.image2].filter(Boolean).map((src) => assetUrl(src));
+  const image = cert.image1 ? assetUrl(cert.image1) : undefined;
 
   return (
     <div
@@ -15,7 +15,7 @@ export function CertificateCard({ cert, onOpen }) {
           title: cert.title,
           subtitle: cert.issuer || cert.institution,
           desc: cert.hours === "—" ? `Categoria: ${cert.category} • Certificado de ${cert.issuer}` : `Carga horária: ${cert.hours}`,
-          images,
+          images: image ? [image] : [],
         })
       }
       className="snap-start shrink-0 w-72 sm:w-80 rounded-xl overflow-hidden cursor-pointer transition-all hover:-translate-y-1 group"
@@ -25,7 +25,7 @@ export function CertificateCard({ cert, onOpen }) {
     >
       <div className="relative overflow-hidden" style={{ aspectRatio: "4/3", background: C.panel2 }}>
         <img
-          src={images[0] || assetUrl(cert.image)}
+          src={image || assetUrl(cert.image)}
           alt={`Certificado — ${cert.title}`}
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
           loading="lazy"
