@@ -45,6 +45,8 @@ export const CAREERS = [
     id: "uxui", icon: Palette, color: C.pink, name: "UX/UI Design",
     short: "A experiência antes da tela",
     desc: "Projeta a experiência e a interface das soluções, entendendo o usuário antes de desenhar qualquer tela.",
+    extra:
+      "UX (User Experience) é sobre como a pessoa se sente usando o site ou app: satisfação, usabilidade, navegação, estrutura, acessibilidade. UI (User Interface) é como ela interage com essa interface: cores, tipografia, ícones, botões, layout. Resumindo — UI é como o produto \"parece\", e UX é como ele \"funciona\" e \"faz você se sentir\".",
     start: ["Figma (ferramenta padrão do mercado)", "Fundamentos de UX (pesquisa, fluxo, teste)", "Princípios de hierarquia visual", "Portfólio com estudos de caso"],
   },
   {

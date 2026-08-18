@@ -21,7 +21,7 @@ export function AboutSection({ onOpen }) {
               subtitle: ABOUT.brand,
               desc: ABOUT.bio,
               extra: `${ABOUT.achievement}. ${ABOUT.extra}`,
-              list: [ABOUT.email, ABOUT.github, ABOUT.linkedin, ABOUT.location],
+              list: [ABOUT.email, ABOUT.github],
               listLabel: "Contato",
             })
           }
@@ -42,7 +42,7 @@ export function AboutSection({ onOpen }) {
               [ABOUT.age, C.green],
               [ABOUT.formation, C.blue],
               [ABOUT.role, C.purple],
-              [ABOUT.achievement, C.amber],
+              // [ABOUT.achievement, C.amber],
             ].map(([txt, color], i) => (
               <div key={i} className="flex items-center gap-3">
                 <span className="w-1.5 h-1.5 rounded-full shrink-0" style={{ background: color }} />

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import { BootOverlay, Confetti, FlyingBug, Toast, Modal } from "./components/common";
+import { BootOverlay, Confetti, FlyingBug, Toast, Modal, PracticeBadge } from "./components/common";
 import { Nav, Footer } from "./components/layout";
 import {
   Hero,
@@ -8,10 +8,14 @@ import {
   ProjectsSection,
   CourseSection,
   ChallengesSection,
-  CareersSection,
+  CareersSection,  
   CertificatesSection,
+
+  CollegeTipsSection,
+  AiDangersSection,
   ConceptsSection,
   GlossarySection,
+  QuestionsSection,
   CuriositiesSection,
 } from "./components/sections";
 
@@ -43,10 +47,13 @@ export default function App() {
       <ProjectsSection onOpen={setModal} />
       <CourseSection onOpen={setModal} />
       <ChallengesSection onOpen={setModal} />
-      <CareersSection onOpen={setModal} />
-      <CertificatesSection onOpen={setModal} />
+      <CareersSection onOpen={setModal} />      <CertificatesSection onOpen={setModal} />
+
+      <CollegeTipsSection onOpen={setModal} />
+      <AiDangersSection onOpen={setModal} />
       <ConceptsSection onOpen={setModal} />
       <GlossarySection onOpen={setModal} />
+      <QuestionsSection />
       <CuriositiesSection onOpen={setModal} onBug={triggerBug} />
       <Footer onBurst={burstConfetti} />
 
@@ -54,6 +61,7 @@ export default function App() {
       <FlyingBug active={bugFlying} />
       <Toast toast={toast} />
       <Modal item={modal} onClose={() => setModal(null)} />
+      <PracticeBadge />
     </div>
   );
 }

@@ -17,7 +17,7 @@ export function ProjectsSection({ onOpen }) {
         file="projetos.jsx"
         color={C.purple}
         title="Projetos que já fiz"
-        subtitle="Uma amostra do que já saiu do papel — projetos reais, entregues pela Fireframe. Clique pra ver mais detalhes de cada um."
+        subtitle="Uma amostra do que já saiu do papel — projetos reais. Clique pra ver mais detalhes de cada um."
       />
 
       <div key={page} className="grid sm:grid-cols-2 md:grid-cols-3 gap-5 animate-fade-in-up">

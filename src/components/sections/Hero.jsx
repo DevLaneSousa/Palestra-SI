@@ -10,7 +10,7 @@ function scrollToSobre() {
 }
 
 export function Hero() {
-  const typed = useTypewriter("programando_o_futuro_da_cidade");
+  const typed = useTypewriter("Guia_inicial");
 
   return (
     <div className="relative overflow-hidden" style={{ background: C.bg }}>

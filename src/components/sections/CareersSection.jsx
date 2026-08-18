@@ -26,6 +26,7 @@ export function CareersSection({ onOpen }) {
                     title: c.name,
                     subtitle: c.short,
                     desc: c.desc,
+                    extra: c.extra,
                     list: c.start,
                   })
                 }
